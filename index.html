@@ -38,8 +38,8 @@
                 <!-- Wireframe - Question Section -->
                 <div class="question">
                     <div class="row">
-                        <fieldset class="col-12">
-                            <legend>Who is Harley Quinn's best friend?</legend>
+                        <div class="col-12">
+                            <h2>Who is Harley Quinn's best friend?</h2>
                             <label for="catwoman">
                                 <input type="radio" id="catwoman" name="questions" value="catwoman">
                                 Catwoman
@@ -59,7 +59,7 @@
                                 <input type="radio" id="powergirl" name="questions" value="powergirl">
                                 Power Girl
                             </label>
-                        </fieldset>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -91,14 +91,63 @@
                     </div>
                 </div>
 
+                <!-- Wireframe - Correct Section -->
+                <div class="result">
+                    <div class="row">
+                        <div class="col-4 empty">&nbsp;</div>
+                        <div class="col-4">
+                            <h2>CONGRATULATIONS<br>
+                            YOU DIDN'T FAIL... THIS TIME</h2>
+                            <img src="https://via.placeholder.com/275x193?text=Joker+Image" alt="Animated image of the Joker sitting in a chair slowly tenting his fingers together.">
+                        </div>
+                        <div class="col-4 empty">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btnNextQuestion">NEXT QUESTION</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wireframe - Final Result Section -->
+                <div class="result final-result">
+                        <div class="row">
+                            <div class="col-4 empty">&nbsp;</div>
+                            <div class="col-4">
+                                <h2>FINAL SCORE</h2>
+                                <p><strong>9</strong> out of <strong>10</strong><p>
+                            </div>
+                            <div class="col-4 empty">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 empty">&nbsp;</div>
+                            <div class="col-8">
+                                <p>You just toddle off to your mundane meaningless little life.</p>
+                            </div>
+                            <div class="col-2 empty">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 empty">&nbsp;</div>
+                            <div class="col-4">
+                                <img src="https://via.placeholder.com/275x193?text=Joker+Image" alt="Animated image of the Joker sitting in a chair slowly tenting his fingers together.">
+                            </div>
+                            <div class="col-4 empty">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" class="btnNextQuestion">PLAY AGAIN</button>
+                            </div>
+                        </div>
+                    </div>
+
             </section>
             <!-- Wireframe - Status Section -->
             <section class="status row" role="region">
-                <div class="col-6">
-                    <span><strong>Question</strong>: 5/10</span>
-                </div>
-                <div class="col-6">
-                    <span><strong>Score</strong>: 9001/10</span>
+                <div class="col-12">
+                    <div class="score">
+                        <span><strong>Question</strong>: 5/10</span>
+                        <span><strong>Score</strong>: 9001/10</span>
+                    </div>
                 </div>
             </section>
 

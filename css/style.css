@@ -17,7 +17,8 @@ img {
 }
 
 header {
-    margin-top: 25px;    
+    padding-top: 25px;    
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -30,9 +31,10 @@ button {
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 5px;
+    margin-top: 15px;
 }
 
-h1, h2, h3, h4, h5, h6, legend{
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Metrophobic', sans-serif;
     text-align: center;
 }
@@ -43,11 +45,7 @@ h1, h2, h3, h4, h5, h6, legend{
 
 /* Questions */
 
-fieldset {
-    border: 0px;
-}
-
-legend {
+h2 {
     font-size: 1.25em;
 }
 
@@ -55,7 +53,7 @@ legend {
     display: block;
     padding: 10px 5px;
     background: #515151;
-    margin: 15px auto;
+    margin: 15px auto 0px;
 }
 
 .question input[type='radio'] {
@@ -79,20 +77,17 @@ legend {
     text-align: center;
 }
 
-.status div {
+.score {
     background: #717171;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.status div span {
+.score span {
     display: block;
-    padding: 5px; 
 }
 
 /* Results Section */
-
-h2 {
-    font-size: 1.25em;
-}
 
 .result {
     text-align: center;
@@ -102,12 +97,20 @@ h2 {
     margin-top: 0px;
 }
 
+.correctAnswer p {
+    margin-bottom: 0px;
+}
+
 .correctAnswer strong {
     color: yellow;
 }
 
 
+/* Final Results Section */
 
+.final-result p {
+    font-size: 1.17em;
+}
 
 
 /* Non-Mobile Web Adjustments */
@@ -122,5 +125,11 @@ h2 {
 
     .empty {
         display: initial;
+    }
+
+    .score span {
+        display: inline-block;
+        padding: 8px 0px; 
+        width: 49%;
     }
 }
