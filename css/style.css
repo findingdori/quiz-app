@@ -32,6 +32,39 @@ button {
     padding: 10px 5px;
 }
 
+fieldset {
+    border: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, legend{
+    font-family: 'Metrophobic', sans-serif;
+    text-align: center;
+}
+
+legend {
+    font-size: 1.25em;
+}
+
+.question label {
+    display: block;
+    padding: 10px 5px;
+    background: #515151;
+    margin: 15px auto;
+}
+
+.question input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    margin: auto 3%;
+    border: 8px solid #c0c0c0;
+}
+
+.question input[type='radio']:checked {
+    appearance: none;
+    border: 8px solid #ffffff;
+}
 
 @media only screen and (min-width: 640px) {
     body {
