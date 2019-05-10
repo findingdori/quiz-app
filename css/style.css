@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6, legend{
     text-align: center;
 }
 
+.empty {
+    display: none;
+}
+
 /* Questions */
 
 fieldset {
@@ -84,7 +88,29 @@ legend {
     padding: 5px; 
 }
 
-/* Mobile Web Adjustments */
+/* Results Section */
+
+h2 {
+    font-size: 1.25em;
+}
+
+.result {
+    text-align: center;
+}
+
+.result h2 {
+    margin-top: 0px;
+}
+
+.correctAnswer strong {
+    color: yellow;
+}
+
+
+
+
+
+/* Non-Mobile Web Adjustments */
 
 @media only screen and (min-width: 640px) {
     body {
@@ -92,5 +118,9 @@ legend {
     }
     header img {
         max-width: 50%;
+    }
+
+    .empty {
+        display: initial;
     }
 }
