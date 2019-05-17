@@ -19,7 +19,7 @@
         </div>
     </header>
     <main role="main">
-        <form action="" method="get" class="quiz-app">
+        <form action="quiz.html" method="get" class="quiz-app">
             <!-- Wireframe - Start Screen -->
             <section class="intro" role="region">
                 <div class="row">
@@ -28,132 +28,12 @@
                     </div>
                     <div class="col-6">
                         <p>You think you know everything there is to know about Batman: The Animated Series? Oh please. Don't insult me. I deserve, nay, demand, the right to quiz your knowledge.</p>
-                        <button type="button" class="btnStartQuiz">Begin Quiz</button>
+                        <button type="submit" class="btnStartQuiz">Begin Quiz</button>
                     </div>
                 </div>
             </section>
-
-            <!-- Wireframe - Quiz Screen -->
-            <section class="quiz" role="region">
-                <!-- Wireframe - Question Section -->
-                <div class="question">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Who is Harley Quinn's best friend?</h2>
-                            <label for="catwoman">
-                                <input type="radio" id="catwoman" name="questions" value="catwoman">
-                                Catwoman
-                            </label>
-    
-                            <label for="batgirl">
-                                <input type="radio" id="batgirl" name="questions" value="batgirl">
-                                Batgirl
-                            </label>
-    
-                            <label for="poisonivy">
-                                <input type="radio" id="poisonivy" name="questions" value="poisonivy">
-                                Poison Ivy
-                            </label>
-    
-                            <label for="powergirl">
-                                <input type="radio" id="powergirl" name="questions" value="powergirl">
-                                Power Girl
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="button" class="btnSubmitAnswer">Submit</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wireframe - Incorrect Section -->
-                <div class="row">
-                    <div class="col-4 empty">&nbsp;</div>
-                    <div class="col-4">
-                        <h2>YOU ARE WRONG!!!!<br>
-                        HA HA HA HA!</h2>
-                        <img src="https://via.placeholder.com/275x193?text=Joker+Image" alt="Animated image of the Joker’s face while he is laughing maliciously.">
-                    </div>
-                    <div class="col-4 empty">&nbsp;</div>
-                </div>
-                <div class="row correctAnswer">
-                    <div class="col-12 ">
-                        <p>The correct answer was obviously '<strong>Poison Ivy</strong>'!</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button type="button" class="btnNextQuestion">NEXT QUESTION</button>
-                    </div>
-                </div>
-
-                <!-- Wireframe - Correct Section -->
-                <div class="row">
-                    <div class="col-4 empty">&nbsp;</div>
-                    <div class="col-4">
-                        <h2>CONGRATULATIONS<br>
-                        YOU DIDN'T FAIL... THIS TIME</h2>
-                        <img src="https://via.placeholder.com/275x193?text=Joker+Image" alt="Animated image of the Joker sitting in a chair slowly tenting his fingers together.">
-                    </div>
-                    <div class="col-4 empty">&nbsp;</div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button type="button" class="btnNextQuestion">NEXT QUESTION</button>
-                    </div>
-                </div>
-
-
-            </section>
-
-            <section class="result" role="region">
-                <!-- Wireframe - Final Result Section -->
-                <div class="row">
-                    <div class="col-4 empty">&nbsp;</div>
-                    <div class="col-4 final-result">
-                        <h2>FINAL SCORE</h2>
-                        <p><strong>9</strong> out of <strong>10</strong><p>
-                    </div>
-                    <div class="col-4 empty">&nbsp;</div>
-                </div>
-                <div class="row">
-                    <div class="col-2 empty">&nbsp;</div>
-                    <div class="col-8">
-                        <p>You just toddle off to your mundane meaningless little life.</p>
-                    </div>
-                    <div class="col-2 empty">&nbsp;</div>
-                </div>
-                <div class="row">
-                    <div class="col-4 empty">&nbsp;</div>
-                    <div class="col-4">
-                        <img src="https://via.placeholder.com/275x193?text=Joker+Image" alt="Animated image of the Joker sitting in a chair slowly tenting his fingers together.">
-                    </div>
-                    <div class="col-4 empty">&nbsp;</div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button type="button" class="btnNextQuestion">PLAY AGAIN</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Wireframe - Status Section -->
-            <section class="quizStatus row" role="region">
-                <div class="col-12">
-                    <div class="score">
-                        <span><strong>Question</strong>: 5/10</span>
-                        <span><strong>Score</strong>: 9001/10</span>
-                    </div>
-                </div>
-            </section>
-
         </form>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/data.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

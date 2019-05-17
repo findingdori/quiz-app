@@ -97,6 +97,10 @@ h2 {
     margin-top: 0px;
 }
 
+.correctAnswer {
+    text-align: center;
+}
+
 .correctAnswer p {
     margin-bottom: 0px;
 }
