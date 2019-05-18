@@ -119,6 +119,20 @@ const ASSETS = [
         startImg: `https://via.placeholder.com/640x340?text=Joker+Image`,
         startImgAlt: `Head shot of The Joker holding up a Joker playing card`,
         startMsg: `You think you know everything there is to know about Batman: The Animated Series? Oh please. Don't insult me. I deserve, nay, demand, the right to quiz your knowledge.`
+    },
+    {
+        id: 'correctAnswer',
+        resultImg : `https://via.placeholder.com/275x193?text=Joker+Image`,
+        resultImgAlt: `Animated image of the Joker’s face while he is laughing maliciously.`,
+        resultMsg: `CONGRATULATIONS<br>
+        YOU DIDN'T FAIL... THIS TIME`
+    },
+    {
+        id: 'wrongAnswer',
+        resultImg: `https://via.placeholder.com/275x193?text=Joker+Image`,
+        resultImgAlt: `Animated image of the Joker sitting in a chair slowly tenting his fingers together.`,
+        resultMsg: `YOU ARE WRONG!!!!<br>
+        HA HA HA HA!`,
     }
 ]
 
