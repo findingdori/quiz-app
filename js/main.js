@@ -1,5 +1,14 @@
 'use strict';
 
+/* Fetch Function */
+function getAssets(assetID) {
+    console.log(`Assets being found`);
+    const quizAssets = ASSETS.find(function(asset) {
+        return asset.id === assetID;
+      });
+    return quizAssets;
+}
+
 function render() {
     if (STORE.view === 'start') {
         

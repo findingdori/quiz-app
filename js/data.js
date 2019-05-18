@@ -113,6 +113,14 @@ const QUESTIONS = [
     }
 ];
 
+const ASSETS = [
+    {
+        id: 'startPage',
+        startImg: `https://via.placeholder.com/640x340?text=Joker+Image`,
+        startImgAlt: `Head shot of The Joker holding up a Joker playing card`,
+        startMsg: `You think you know everything there is to know about Batman: The Animated Series? Oh please. Don't insult me. I deserve, nay, demand, the right to quiz your knowledge.`
+    }
+]
 
 const STORE = {
     view: 'start',
