@@ -31,8 +31,7 @@ function generateQuestion(currQuestion) {
     console.log('Generating question');
     const answers = generateAnswerList(currQuestion);
 
-    return `<div>
-        <div class="row question">
+    return `<div class="row question">
             <div class="col-12">
                 <h2>${currQuestion.question}</h2>
                 <fieldset>
@@ -44,8 +43,7 @@ function generateQuestion(currQuestion) {
             <div class="col-12">
                 <button type="submit" class="btnSubmitAnswer">Submit</button>
             </div>
-        </div>
-    </div>`
+        </div>`
 }
 
 /* Fetch Functions */
@@ -86,6 +84,7 @@ function render() {
         $('.quizStatus').hide();
      } else if (STORE.view === 'quiz') {
         renderQuestionText();
+        //renderQuizStatusBar();
         $('.intro').hide();
         $('.quiz').show();
         $('.result').hide();
