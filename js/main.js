@@ -84,25 +84,27 @@ function generateQuestionResult() {
 }
 
 function generateFinalResult() {
+    console.log(`Generating Final Results`);
+    const resultAssets = getAssets('finalResult');
     return `<div class="row">
         <div class="col-4 empty">&nbsp;</div>
         <div class="col-4 final-result">
             <h2>FINAL SCORE</h2>
-            <p><strong>9</strong> out of <strong>10</strong><p>
+            <p><strong>${STORE.userScore}</strong> out of <strong>${QUESTIONS.length}</strong><p>
         </div>
         <div class="col-4 empty">&nbsp;</div>
     </div>
     <div class="row">
         <div class="col-2 empty">&nbsp;</div>
         <div class="col-8">
-            <p>You just toddle off to your mundane meaningless little life.</p>
+            <p>${STORE.userScore > (QUESTIONS.length/2) ? `${resultAssets.goodResultMsg}` : `${resultAssets.badResultMsg}`}</p>
         </div>
         <div class="col-2 empty">&nbsp;</div>
     </div>
     <div class="row">
         <div class="col-4 empty">&nbsp;</div>
         <div class="col-4">
-            <img src="https://via.placeholder.com/275x193?text=Joker+Image" alt="Animated image of the Joker sitting in a chair slowly tenting his fingers together.">
+        ${STORE.userScore > (QUESTIONS.length/2) ? `<img src="${resultAssets.goodResultImg}" alt="${resultAssets.goodResultImgAlt}">` : `<img src="${resultAssets.badResultImg}" alt="${resultAssets.badResultImgAlt}">`}
         </div>
         <div class="col-4 empty">&nbsp;</div>
     </div>
@@ -262,7 +264,6 @@ function handleNextQuestion() {
             advanceToNextQuestion();
             STORE.view = 'quiz';
         } else {
-            console.log('Proceed to final result');
             STORE.view = 'finalResult';
         }
         render();

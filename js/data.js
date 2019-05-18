@@ -133,6 +133,14 @@ const ASSETS = [
         resultImgAlt: `Animated image of the Joker sitting in a chair slowly tenting his fingers together.`,
         resultMsg: `YOU ARE WRONG!!!!<br>
         HA HA HA HA!`,
+    },{
+        id: 'finalResult',
+        goodResultImg: `https://via.placeholder.com/275x193?text=Joker+Image`,
+        goodResultImgAlt: `Animated image of the Joker pinching Harley Quinn’s cheek while she says: “Oh Pudding’, you put the ‘fun’ in funeral.”`,
+        goodResultMsg: `You put the 'fun' in funeral!`,
+        badResultImg: `https://via.placeholder.com/275x193?text=Joker+Image`,
+        badResultImgAlt: `Animated image of the Joker while his grin slowly turns into a frown as he bows down. In the background, Harley Quinn is clapping happily.`,
+        badResultMsg: `You just toddle off to your mundane meaningless little life.`
     }
 ]
 
