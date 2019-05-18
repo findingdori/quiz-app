@@ -46,6 +46,16 @@ function generateQuestion(currQuestion) {
         </div>`
 }
 
+function generateQuizStatus() {
+    console.log('Generating quiz status bar');
+    return `<div class="col-12">
+        <div class="score">
+            <span><strong>Question</strong>: ${STORE.currentQuestion}/${QUESTIONS.length}</span>
+            <span><strong>Score</strong>: ${STORE.userScore}/${QUESTIONS.length}</span>
+        </div>
+    </div>`
+}
+
 /* Fetch Functions */
 function getAssets(assetID) {
     console.log(`Assets being found`);
@@ -75,6 +85,11 @@ function renderQuestionText() {
     $('.quiz').html(generateQuestion(currQuestion));
 }
 
+function renderQuizStatusBar() {
+    console.log('Rendering quiz status bar');
+    $('.quizStatus').html(generateQuizStatus());
+}
+
 function render() {
     if (STORE.view === 'start') {
         renderStartQuiz();
@@ -84,13 +99,14 @@ function render() {
         $('.quizStatus').hide();
      } else if (STORE.view === 'quiz') {
         renderQuestionText();
-        //renderQuizStatusBar();
+        renderQuizStatusBar();
         $('.intro').hide();
         $('.quiz').show();
         $('.result').hide();
         $('.quizStatus').show();
      } else if (STORE.view === 'questionResult') {
 
+        renderQuizStatusBar();
         $('.intro').hide();
         $('.quiz').hide();
         $('.result').show();
