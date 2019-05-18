@@ -110,7 +110,7 @@ function generateFinalResult() {
     </div>
     <div class="row">
         <div class="col-12">
-            <button type="button" class="btnNextQuestion">PLAY AGAIN</button>
+            <button type="button" class="btnRestartQuiz">PLAY AGAIN</button>
         </div>
     </div>`
 }
@@ -174,6 +174,13 @@ function advanceToNextQuestion() {
 function clearAnswer() {
     console.log('Answer is being cleared');
     STORE.currentAnswer = null;
+}
+
+function restartQuiz() {
+    console.log('Restarting Quiz');
+    STORE.view = 'start';
+    STORE.currentQuestion = 1;
+    STORE.userScore = 0;
 }
 
 /* Rendering Functions */
@@ -271,11 +278,21 @@ function handleNextQuestion() {
     });
 }
 
+function handleRestartQuiz() {
+    console.log('Handling restart quiz process');
+    $('.result').on('click', '.btnRestartQuiz', function(event) {
+        event.preventDefault();
+        restartQuiz();
+        render();
+    });
+}
+
 function initializePage() {
     //Event Listeners
     handleQuizStart();
     handleAnswerSubmitted();
     handleNextQuestion();
+    handleRestartQuiz();
 
     //Render Function
     render();
