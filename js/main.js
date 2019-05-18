@@ -61,17 +61,17 @@ function generateQuestionResult() {
     return `<div class="row">
         <div class="col-4 empty">&nbsp;</div>
         <div class="col-4">
-            <h2>RIGHT OR WRONG</h2>
+            <h2>${STORE.currentAnswer}</h2>
             <img src="img.png" alt="ALT TEXT">
         </div>
         <div class="col-4 empty">&nbsp;</div>
     </div>
 
-    <div class="row correctAnswer">
+    ${STORE.currentAnswer === 'wrongAnswer' ? `<div class="row correctAnswer">
         <div class="col-12 ">
-            <p>The correct answer was obviously '<strong>CORRECT ANSWER HERE</strong>'!</p>
+            <p>The correct answer was obviously '<strong>CORRECT ANSWER</strong>'!</p>
         </div>
-    </div>
+    </div>` : ''}
 
     <div class="row">
         <div class="col-12">
@@ -95,6 +95,35 @@ function getCurrentQuestion () {
         return question.id === STORE.currentQuestion;
       });
     return questionObject;
+}
+
+function getCurrentQuestionIndex () {
+    console.log('Getting current question array index');
+    const questionIndex = QUESTIONS.findIndex(function(question) {
+        return question.id === STORE.currentQuestion;
+      });
+    return questionIndex;
+}
+
+function getCorrectAnswer() {
+    console.log('Correct answer is being found');
+    const questionIndex = getCurrentQuestionIndex();
+    const answerIndex = QUESTIONS[questionIndex].correctAnswer;
+    const correctAnswerText = QUESTIONS[questionIndex].answers[answerIndex];
+    return correctAnswerText;
+}
+
+function checkAnswer() {
+    console.log('Answer is being checked')
+     const currentAnswer = $( "input:checked" ).val();
+     const correctAnswerText = getCorrectAnswer();
+     
+     if (currentAnswer === correctAnswerText) {
+        STORE.currentAnswer = 'correctAnswer';
+        //update user score
+     } else {
+        STORE.currentAnswer = 'wrongAnswer';
+     }    
 }
 
 /* Rendering Functions */
@@ -165,6 +194,7 @@ function handleAnswerSubmitted() {
     $('.quiz').on('click', '.btnSubmitAnswer', function (event) {
         event.preventDefault();
         console.log('Answer has been submitted');
+        checkAnswer();
         STORE.view = 'questionResult';
         render();
     });
