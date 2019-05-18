@@ -58,11 +58,13 @@ function generateQuizStatus() {
 
 function generateQuestionResult() {
     console.log(`Generating Question Results`);
+    const resultAssets = getAssets(STORE.currentAnswer);
+
     return `<div class="row">
         <div class="col-4 empty">&nbsp;</div>
         <div class="col-4">
-            <h2>${STORE.currentAnswer}</h2>
-            <img src="img.png" alt="ALT TEXT">
+            <h2>${resultAssets.resultMsg}</h2>
+            <img src="${resultAssets.resultImg}" alt="${resultAssets.resultImgAlt}">
         </div>
         <div class="col-4 empty">&nbsp;</div>
     </div>
