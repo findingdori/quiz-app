@@ -14,12 +14,13 @@ function generateStartPage() {
     </div>`;
 }
 
-function generateQuestion() {
-    console.log('Generating question')
+function generateQuestion(currQuestion) {
+    console.log('Generating question');
+
     return `<div>
         <div class="row question">
             <div class="col-12">
-                <h2>QUESTION GOES HERE</h2>
+                <h2>${currQuestion.question}</h2>
                 <fieldset>
                     ANSWERS GO HERE
                 </fieldset>
@@ -42,6 +43,14 @@ function getAssets(assetID) {
     return quizAssets;
 }
 
+function getCurrentQuestion () {
+    console.log('Getting current question object')
+    const questionObject = QUESTIONS.find(function(question) {
+        return question.id === STORE.currentQuestion;
+      });
+    return questionObject;
+}
+
 /* Rendering Functions */
 function renderStartQuiz() {
     console.log('Generating start of quiz');
@@ -50,7 +59,8 @@ function renderStartQuiz() {
 
 function renderQuestionText() {
     console.log('Rendering question');
-    $('.quiz').html(generateQuestion());
+    const currQuestion = getCurrentQuestion();
+    $('.quiz').html(generateQuestion(currQuestion));
 }
 
 function render() {
