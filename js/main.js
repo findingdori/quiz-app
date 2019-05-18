@@ -62,12 +62,12 @@ function generateQuestionResult() {
     const correctAnswerText = getCorrectAnswer();
 
     return `<div class="row">
-        <div class="col-4 empty">&nbsp;</div>
-        <div class="col-4">
+        <div class="col-3 empty">&nbsp;</div>
+        <div class="col-6">
             <h2>${resultAssets.resultMsg}</h2>
             <img src="${resultAssets.resultImg}" alt="${resultAssets.resultImgAlt}">
         </div>
-        <div class="col-4 empty">&nbsp;</div>
+        <div class="col-3 empty">&nbsp;</div>
     </div>
 
     ${STORE.currentAnswer === 'wrongAnswer' ? `<div class="row correctAnswer">
@@ -88,7 +88,7 @@ function generateFinalResult() {
     const resultAssets = getAssets('finalResult');
     return `<div class="row">
         <div class="col-4 empty">&nbsp;</div>
-        <div class="col-4 final-result">
+        <div class="col-4 finalResult">
             <h2>FINAL SCORE</h2>
             <p><strong>${STORE.userScore}</strong> out of <strong>${QUESTIONS.length}</strong><p>
         </div>
@@ -97,16 +97,16 @@ function generateFinalResult() {
     <div class="row">
         <div class="col-2 empty">&nbsp;</div>
         <div class="col-8">
-            <p>${STORE.userScore > (QUESTIONS.length/2) ? `${resultAssets.goodResultMsg}` : `${resultAssets.badResultMsg}`}</p>
+            <p class="finalResultMsg">${STORE.userScore > (QUESTIONS.length/2) ? `${resultAssets.goodResultMsg}` : `${resultAssets.badResultMsg}`}</p>
         </div>
         <div class="col-2 empty">&nbsp;</div>
     </div>
     <div class="row">
-        <div class="col-4 empty">&nbsp;</div>
-        <div class="col-4">
+        <div class="col-3 empty">&nbsp;</div>
+        <div class="col-6">
         ${STORE.userScore > (QUESTIONS.length/2) ? `<img src="${resultAssets.goodResultImg}" alt="${resultAssets.goodResultImgAlt}">` : `<img src="${resultAssets.badResultImg}" alt="${resultAssets.badResultImgAlt}">`}
         </div>
-        <div class="col-4 empty">&nbsp;</div>
+        <div class="col-3 empty">&nbsp;</div>
     </div>
     <div class="row">
         <div class="col-12">
