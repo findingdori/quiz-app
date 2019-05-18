@@ -59,6 +59,7 @@ function generateQuizStatus() {
 function generateQuestionResult() {
     console.log(`Generating Question Results`);
     const resultAssets = getAssets(STORE.currentAnswer);
+    const correctAnswerText = getCorrectAnswer();
 
     return `<div class="row">
         <div class="col-4 empty">&nbsp;</div>
@@ -71,7 +72,7 @@ function generateQuestionResult() {
 
     ${STORE.currentAnswer === 'wrongAnswer' ? `<div class="row correctAnswer">
         <div class="col-12 ">
-            <p>The correct answer was obviously '<strong>CORRECT ANSWER</strong>'!</p>
+            <p>The correct answer was obviously '<strong>${correctAnswerText}</strong>'!</p>
         </div>
     </div>` : ''}
 
