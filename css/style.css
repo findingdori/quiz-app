@@ -49,6 +49,10 @@ h2 {
     font-size: 1.25em;
 }
 
+fieldset {
+    border-width: 0px;
+}
+
 .question label {
     display: block;
     padding: 10px 5px;

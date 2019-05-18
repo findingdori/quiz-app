@@ -14,6 +14,25 @@ function generateStartPage() {
     </div>`;
 }
 
+function generateQuestion() {
+    console.log('Generating question')
+    return `<div>
+        <div class="row question">
+            <div class="col-12">
+                <h2>QUESTION GOES HERE</h2>
+                <fieldset>
+                    ANSWERS GO HERE
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btnSubmitAnswer">Submit</button>
+            </div>
+        </div>
+    </div>`
+}
+
 /* Fetch Functions */
 function getAssets(assetID) {
     console.log(`Assets being found`);
@@ -29,6 +48,11 @@ function renderStartQuiz() {
     $('.intro').html(generateStartPage());
 }
 
+function renderQuestionText() {
+    console.log('Rendering question');
+    $('.quiz').html(generateQuestion());
+}
+
 function render() {
     if (STORE.view === 'start') {
         renderStartQuiz();
@@ -37,7 +61,7 @@ function render() {
         $('.result').hide();
         $('.quizStatus').hide();
      } else if (STORE.view === 'quiz') {
-
+        renderQuestionText();
         $('.intro').hide();
         $('.quiz').show();
         $('.result').hide();
