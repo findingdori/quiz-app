@@ -1,6 +1,20 @@
 'use strict';
 
-/* Fetch Function */
+/* Template Generators */
+function generateStartPage() {
+    const assets = getAssets('startPage');
+    return `<div class="row">
+        <div class="col-6">
+            <img src="${assets.startImg}" alt="${assets.startImg}">
+        </div>
+        <div class="col-6">
+            <p>${assets.startMsg}</p>
+            <button type="button" class="btnStartQuiz">Begin Quiz</button>
+        </div>
+    </div>`;
+}
+
+/* Fetch Functions */
 function getAssets(assetID) {
     console.log(`Assets being found`);
     const quizAssets = ASSETS.find(function(asset) {
@@ -9,9 +23,15 @@ function getAssets(assetID) {
     return quizAssets;
 }
 
+/* Rendering Functions */
+function renderStartQuiz() {
+    console.log('Generating start of quiz');
+    $('.intro').html(generateStartPage());
+}
+
 function render() {
     if (STORE.view === 'start') {
-        
+        renderStartQuiz();
         $('.intro').show();
         $('.quiz').hide();
         $('.result').hide();
