@@ -131,9 +131,20 @@ function handleQuizStart() {
     });
 }
 
+function handleAnswerSubmitted() {
+    console.log('Handling submit answer process');
+    $('.quiz').on('click', '.btnSubmitAnswer', function (event) {
+        event.preventDefault();
+        console.log('Answer has been submitted');
+        STORE.view = 'questionResult';
+        render();
+    });
+}
+
 function initializePage() {
     //Event Listeners
     handleQuizStart();
+    handleAnswerSubmitted();
 
     //Render Function
     render();
