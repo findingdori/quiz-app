@@ -113,6 +113,11 @@ function getCorrectAnswer() {
     return correctAnswerText;
 }
 
+function updateUserScore() {
+    console.log('Updating user score');
+    STORE.userScore++;
+}
+
 function checkAnswer() {
     console.log('Answer is being checked')
      const currentAnswer = $( "input:checked" ).val();
@@ -120,7 +125,7 @@ function checkAnswer() {
      
      if (currentAnswer === correctAnswerText) {
         STORE.currentAnswer = 'correctAnswer';
-        //update user score
+        updateUserScore();
      } else {
         STORE.currentAnswer = 'wrongAnswer';
      }    
