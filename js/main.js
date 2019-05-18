@@ -134,6 +134,16 @@ function checkAnswer() {
      }    
 }
 
+function advanceToNextQuestion() {
+    console.log('Question count is increasing')
+    STORE.currentQuestion++;
+}
+
+function clearAnswer() {
+    console.log('Answer is being cleared');
+    STORE.currentAnswer = null;
+}
+
 /* Rendering Functions */
 function renderStartQuiz() {
     console.log('Generating start of quiz');
@@ -208,10 +218,28 @@ function handleAnswerSubmitted() {
     });
 }
 
+function handleNextQuestion() {
+    console.log('Handling next question process');
+    $('.result').on('click', '.btnNextQuestion', function(event) {
+        event.preventDefault();
+        clearAnswer();
+        if (STORE.currentQuestion < QUESTIONS.length) {
+            advanceToNextQuestion();
+            STORE.view = 'quiz';
+        } else {
+            console.log('Proceed to final result');
+            STORE.view = 'finalResult';
+        }
+        render();
+        
+    });
+}
+
 function initializePage() {
     //Event Listeners
     handleQuizStart();
     handleAnswerSubmitted();
+    handleNextQuestion();
 
     //Render Function
     render();
