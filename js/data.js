@@ -123,14 +123,14 @@ const ASSETS = [
     {
         id: 'correctAnswer',
         resultImg : `https://via.placeholder.com/275x193?text=Joker+Image`,
-        resultImgAlt: `Animated image of the Joker’s face while he is laughing maliciously.`,
+        resultImgAlt: `Animated image of the Joker sitting in a chair slowly tenting his fingers together.`,
         resultMsg: `CONGRATULATIONS<br>
         YOU DIDN'T FAIL... THIS TIME`
     },
     {
         id: 'wrongAnswer',
         resultImg: `https://via.placeholder.com/275x193?text=Joker+Image`,
-        resultImgAlt: `Animated image of the Joker sitting in a chair slowly tenting his fingers together.`,
+        resultImgAlt: `Animated image of the Joker’s face while he is laughing maliciously.`,
         resultMsg: `YOU ARE WRONG!!!!<br>
         HA HA HA HA!`,
     },{
