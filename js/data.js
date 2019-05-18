@@ -69,7 +69,7 @@ const QUESTIONS = [
     },
     {
         id: 7,
-        question: `Who caused Harvey Dent to become Two-Face?`,
+        question: `Who caused Harvey Dent to become the villain Two-Face?`,
         answers: [
         `Rachel Dawes`,
         `Rupert Thorne`,
