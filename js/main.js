@@ -57,8 +57,20 @@ function render() {
      }
    }
 
+/* Event Handlers */
+function handleQuizStart() {
+    console.log('Handling start quiz process');
+    $('.intro').on('click', '.btnStartQuiz', function(event) {
+        event.preventDefault();
+        console.log('Quiz has started');
+        STORE.view = 'quiz';
+        render();
+    });
+}
+
 function initializePage() {
     //Event Listeners
+    handleQuizStart();
 
     //Render Function
     render();
