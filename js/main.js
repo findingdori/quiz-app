@@ -56,6 +56,30 @@ function generateQuizStatus() {
     </div>`
 }
 
+function generateQuestionResult() {
+    console.log(`Generating Question Results`);
+    return `<div class="row">
+        <div class="col-4 empty">&nbsp;</div>
+        <div class="col-4">
+            <h2>RIGHT OR WRONG</h2>
+            <img src="img.png" alt="ALT TEXT">
+        </div>
+        <div class="col-4 empty">&nbsp;</div>
+    </div>
+
+    <div class="row correctAnswer">
+        <div class="col-12 ">
+            <p>The correct answer was obviously '<strong>CORRECT ANSWER HERE</strong>'!</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="btnNextQuestion">NEXT QUESTION</button>
+        </div>
+    </div>`
+}
+
 /* Fetch Functions */
 function getAssets(assetID) {
     console.log(`Assets being found`);
@@ -90,6 +114,11 @@ function renderQuizStatusBar() {
     $('.quizStatus').html(generateQuizStatus());
 }
 
+function renderQuestionResult() {
+    console.log('Result is being rendered');
+    $('.result').html(generateQuestionResult());
+}
+
 function render() {
     if (STORE.view === 'start') {
         renderStartQuiz();
@@ -105,7 +134,7 @@ function render() {
         $('.result').hide();
         $('.quizStatus').show();
      } else if (STORE.view === 'questionResult') {
-
+        renderQuestionResult();
         renderQuizStatusBar();
         $('.intro').hide();
         $('.quiz').hide();
