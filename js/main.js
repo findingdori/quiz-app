@@ -14,15 +14,29 @@ function generateStartPage() {
     </div>`;
 }
 
+function generateAnswerItem(answer, index) {
+    return `<label for="${index}">
+        <input type="radio" id="${index}" name="questions" value="${answer}" required>
+        ${answer}
+    </label>`;
+}
+
+function generateAnswerList(question) {
+    console.log("Generating answers list");
+    const answers = question.answers.map((answer, index) => generateAnswerItem(answer, index));
+    return answers.join("");
+}
+
 function generateQuestion(currQuestion) {
     console.log('Generating question');
+    const answers = generateAnswerList(currQuestion);
 
     return `<div>
         <div class="row question">
             <div class="col-12">
                 <h2>${currQuestion.question}</h2>
                 <fieldset>
-                    ANSWERS GO HERE
+                    ${answers}
                 </fieldset>
             </div>
         </div>

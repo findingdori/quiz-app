@@ -51,6 +51,8 @@ h2 {
 
 fieldset {
     border-width: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .question label {
