@@ -41,8 +41,8 @@ function generateQuestion(currQuestion) {
     return `<form class="quiz-app">
         <div class="row question">
             <div class="col-12">
-                <h2>${currQuestion.question}</h2>
                 <fieldset>
+                    <legend>${currQuestion.question}</legend>
                     ${answers}
                 </fieldset>
             </div>

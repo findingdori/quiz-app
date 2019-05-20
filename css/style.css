@@ -51,7 +51,7 @@ button:hover {
     background-color: #73030C;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, legend {
     font-family: 'Metrophobic', sans-serif;
     text-align: center;
     line-height: 150%;
@@ -69,8 +69,12 @@ header img {
 
 /* Questions */
 
-h2 {
+h2, legend {
     font-size: 24px;
+}
+
+legend {
+    font-weight: bold;
 }
 
 fieldset {
@@ -177,7 +181,7 @@ fieldset {
 /* Non-Mobile Web Adjustments */
 
 @media only screen and (min-width: 640px) {
-    .question h2 {
+    .question legend {
         font-size: 27px;
     }
 
