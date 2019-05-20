@@ -1,5 +1,8 @@
 'use strict';
 
+/* In lieu of database, these objects and arrays are being used for storage */
+
+/* Storage of Question ID, Question, Answers, and Correct Answer */
 const QUESTIONS = [
     {
         id: 1,
@@ -113,6 +116,8 @@ const QUESTIONS = [
     }
 ];
 
+/* Storage of Image Assets and Messages. 
+I am storing the images this way vs static HTML to replicate how data like this is normally pulled form database storage and to easily reuse the template to easily create other quizzes without having to modify main.js */
 const ASSETS = [
     {
         id: 'startPage',
@@ -144,6 +149,7 @@ const ASSETS = [
     }
 ]
 
+/* Store user data such as view status, question, score, and if current answer is right or wrong */
 const STORE = {
     view: 'start',
     currentQuestion: 1,
