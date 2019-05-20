@@ -44,6 +44,7 @@ button {
     color: white;
     border-radius: 5px;
     border: 0px solid #86030E;
+    cursor: pointer;
 }
 
 button:hover {
@@ -84,6 +85,7 @@ fieldset {
     background: #C1C1C1;
     margin: 15px auto 0px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .question input[type='radio'] {
@@ -93,6 +95,7 @@ fieldset {
     border-radius: 50%;
     margin: auto 3%;
     border: 8px solid #ffffff;
+    cursor: pointer;
 }
 
 .question input[type='radio']:checked {
